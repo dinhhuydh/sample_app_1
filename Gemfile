@@ -32,7 +32,8 @@ gem 'gravatar_image_tag', '0.1.0'
 
 group :development do
   gem 'rspec-rails', '2.0.1'
-  #gem 'annotate-models', '1.0.4'
+  gem 'annotate'
+  gem 'faker', '0.3.1'
 end
 
 group :test do
