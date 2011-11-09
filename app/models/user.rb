@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   
   has_many :microposts, :dependent => :destroy
   has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
+  has_many :reverse_relationships, :foreign_key => "followed_id",
+                                   :class_name => "Relationships",
+                                   :dependent => :destroy
   has_many :following, :through => :relationships, :source => :followed
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
