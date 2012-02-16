@@ -232,6 +232,7 @@ describe User do
     end
 
     it "should include the follower in the followers array" do
+      debugger
       @user.follow!(@followed)
       @followed.followers.should include(@user)
     end
