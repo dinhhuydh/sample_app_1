@@ -10,6 +10,9 @@ gem 'gravatar_image_tag', '0.1.0'
 gem 'will_paginate', '3.0.pre2'
 gem 'paperclip'
 gem 'friendly_id'
+gem 'rabl'
+gem 'yajl-ruby'
+gem 'json', '1.6.3'
 
 
 

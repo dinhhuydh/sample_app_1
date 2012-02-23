@@ -1,5 +1,9 @@
 SampleApp1::Application.routes.draw do
   resources :sessions, :only =>[:new, :create, :destroy]
+
+  resources :api, :only => [:index, :show], :module => :api, :defaults => {:format => :json} do
+    resources :microposts
+  end
   resources :microposts, :only => [:create, :destroy]
 
   resources :users
@@ -12,7 +16,6 @@ SampleApp1::Application.routes.draw do
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
   
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
