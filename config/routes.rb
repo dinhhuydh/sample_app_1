@@ -15,7 +15,9 @@ SampleApp1::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
-  
+ 
+  get 'community/index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

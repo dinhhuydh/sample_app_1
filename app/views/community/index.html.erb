@@ -1,0 +1,14 @@
+<h1>All users in community</h1>
+<ul class="users">
+  <%= @users.size %>
+  <% @users.each do |user| %>
+    <%= link_to user.name, user %>
+    <% if current_user.following?(user) %>
+      <%= link_to 'unfollow', '#' %>
+    <% else %>
+      <%= link_to 'follow', '#' %>
+    <% end %>
+    <br/>
+    <br/>
+  <% end %>
+</ul>
